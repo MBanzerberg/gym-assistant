@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -21,7 +22,7 @@ public class Weight {
     private int weight;
 
     @Column(name="date")
-    private LocalDateTime date;
+    private LocalDate date;
 
     @ManyToOne @JoinColumn(name="exercise.id")
     private Exercise exercise;
