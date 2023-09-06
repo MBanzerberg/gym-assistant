@@ -1,2 +1,2 @@
 # Gym Assistant
-Application is to help follow your progress on a gym.
+An application that allows you to easily monitor your progress in the gym
