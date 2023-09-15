@@ -1,24 +1,22 @@
 <template>
-  <div class="content">
-    <button><span></span>{{text}}</button>
-  </div>
+  <button><span></span>{{text}}</button>
 </template>
 
 <script>
 export default {
-  name: "ButtonItem",
+  name: "NewButtonComponent",
   props: ['text']
 }
 </script>
 
 <style scoped>
 
-.content button {
-  width: 200px;
-  padding: 15px 0;
+button {
+  width: 150px;
+  height: 60px;
   text-align: center;
-  margin: 10px 10px;
   border-radius: 25px;
+  margin-right: 5px;
   font-weight: bold;
   border: 2px solid #009688;
   background: transparent;
@@ -28,7 +26,7 @@ export default {
   overflow: hidden;
 }
 
-.content span {
+span {
   background: #009688;
   height: 100%;
   width: 0;
@@ -40,11 +38,11 @@ export default {
   transition: 0.5s;
 }
 
-.content button:hover span {
+button:hover span {
   width: 100%;
 }
 
-.content button:hover {
+button:hover {
   border: none;
 }
 

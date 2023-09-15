@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="main-container">
       <div class="navbar">
         <div class="dumbbell-icon"></div>
         <ul>
@@ -8,23 +8,19 @@
           <li><a href="#">About Us</a></li>
         </ul>
       </div>
-
       <div class="content">
-        <h1>Gym Assistant</h1>
-        <div class="buttons">
-          <button-item text="Dodaj ćwiczenie"/>
-          <button-item text="Dodaj nowe dane"/>
-        </div>
+        <main-menu-item/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ButtonItem from "@/components/ButtonItem";
+import MainMenuItem from "@/components/MainMenuItem";
+//import NewExerciseItem from "@/components/NewExerciseItem";
 
 export default {
-  components: {ButtonItem}
+  components: {MainMenuItem}
 }
 </script>
 
@@ -43,7 +39,7 @@ export default {
   background-position: left;
 }
 
-.banner {
+.main-container {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("assets/gym.jpg");
@@ -76,7 +72,7 @@ export default {
 .navbar ul li::after {
   content: '';
   height: 3px;
-  width: 0px;
+  width: 0;
   background: #009688;
   position: absolute;
   left: 0;
@@ -89,21 +85,13 @@ export default {
 }
 
 .content {
-  width: 100%;
-  position: relative;
-  top: 35%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #fff;
-}
+  /*background-color: red;*/
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  left: 22%;
+  top: 20%;
 
-.content .buttons {
-  margin: 40px 20px;
-}
-
-.content h1 {
-  font-size: 70px;
-  margin-top: 80px;
 }
 
 </style>
